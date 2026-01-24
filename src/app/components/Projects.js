@@ -42,7 +42,7 @@ const projects = [
       "Integrated LSB steganography for covert encrypted payload transfer within images",
     ],
     links: {
-      github: "https://github.com/yourusername/secure-communication-platform",
+      github: "https://github.com/ruthesh-git/NewsApp",
       // demo: "https://demo-link.com", // Uncomment when available
     },
   },

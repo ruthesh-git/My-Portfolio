@@ -17,7 +17,7 @@ export const metadata = {
     template: "%s | Ruthesh Medaboina",
   },
   description:
-    "Full-stack developer specializing in Next.js, Django, and modern web technologies.",
+    "Full-stack developer specializing in Java, Springboot, Next.js, and modern web technologies.",
 }
 
 export default function RootLayout({ children }) {

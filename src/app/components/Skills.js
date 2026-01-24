@@ -26,12 +26,16 @@ const skillGroups = [
       "Next.js",
       "Tailwind CSS",
       "Framer Motion",
-      "SSR",
     ],
   },
   {
     title: "Backend",
     items: [
+      "Java",
+      "Spring Boot",
+      "Node.js",
+      "C/C++",
+      "MongoDB",
       "Python",
       "Django",
       "REST APIs",
@@ -52,6 +56,8 @@ const skillGroups = [
       "Docker",
       "System Design",
       "DSA",
+      "Postman",
+      "GenAI Integration",
     ],
   },
 ]
