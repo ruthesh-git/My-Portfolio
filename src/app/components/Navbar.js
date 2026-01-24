@@ -111,13 +111,7 @@ export default function Navbar() {
         initial={{ y: 0 }}
         animate={{ y: hidden ? "-100%" : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="
-          fixed top-0 left-0 z-50 w-full
-          flex items-center justify-between
-          px-6 md:px-12 lg:px-20 py-4
-          bg-black/90 backdrop-blur-md
-          border-b border-white/5
-        "
+        className=" fixed top-0 left-0 z-50 w-full flex items-center justify-between px-6 md:px-12 lg:px-20 py-4 bg-black/90 backdrop-blur-md border-b border-white/5"
         role="navigation"
         aria-label="Main navigation"
       >
@@ -216,13 +210,7 @@ export default function Navbar() {
           height: mobileMenuOpen ? "auto" : 0,
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="
-          fixed top-[73px] left-0 z-40 w-full
-          bg-black/95 backdrop-blur-md
-          border-b border-white/5
-          overflow-hidden
-          md:hidden
-        "
+        className="fixed top-[73px] left-0 z-40 w-full bg-black/95 backdrop-blur-md border-b border-white/5 overflow-hidden md:hidden"
       >
         <ul className="flex flex-col py-4 px-6 space-y-1">
           {NAV_ITEMS.map((item) => {

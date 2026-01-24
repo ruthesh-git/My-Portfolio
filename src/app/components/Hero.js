@@ -87,16 +87,7 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <button
         onClick={scrollToNextSection}
-        className="
-          absolute bottom-8 left-1/2 -translate-x-1/2
-          text-gray-500 hover:text-gray-300
-          transition-all duration-300
-          animate-bounce
-          cursor-pointer
-          p-2
-          text-2xl
-          hover:scale-110
-        "
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500 hover:text-gray-300 transition-all duration-300 animate-bounce cursor-pointer p-2 text-2xl hover:scale-110"
         aria-label="Scroll to next section"
       >
         ↓

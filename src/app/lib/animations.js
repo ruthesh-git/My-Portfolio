@@ -1,5 +1,8 @@
 // src/lib/animations.js
 
+// Reusable animation variants and utility functions for Framer Motion
+// You can import these into your components to apply consistent animations
+
 // ───────────────── Animation Constants ─────────────────
 
 export const EASING = {

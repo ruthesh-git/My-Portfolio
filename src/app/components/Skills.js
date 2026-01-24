@@ -136,32 +136,22 @@ const badge = {
 export default function SkillsTree() {
   return (
     <section
-      className="px-6 md:px-20 py-32 bg-gray-950"
-      aria-labelledby="skills-title"
+      id="skills"
+      className="min-h-screen px-6 md:px-20 py-32 flex flex-col justify-center"
+      aria-labelledby="skills-heading"
     >
-      {/* Screen-reader title */}
-      <h2 id="skills-title" className="sr-only">
-        Skills
-      </h2>
-
-      {/* Center title badge */}
-      <div className="flex justify-center mb-20">
-        <motion.div
-          variants={badge}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: ANIMATION_CONSTANTS.viewportAmount }}
-          className="
-            px-6 py-3 text-sm tracking-wide
-            border border-cyan-400/30
-            rounded-md
-            text-cyan-300
-            shadow-[0_0_30px_rgba(56,189,248,0.25)]
-          "
+      {/* Section Header */}
+      <header className="mb-16 md:mb-20">
+        <h2 
+          id="skills-heading"
+          className="text-3xl md:text-5xl font-bold text-white mb-4"
         >
-          MY SKILLS
-        </motion.div>
-      </div>
+          Skills & Technologies
+        </h2>
+        <p className="text-base md:text-lg text-gray-400 max-w-2xl">
+          Technologies and tools I work with to build scalable, performant applications.
+        </p>
+      </header>
 
       <div className="relative max-w-6xl mx-auto">
         {/* Skill groups */}
@@ -178,15 +168,7 @@ export default function SkillsTree() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: ANIMATION_CONSTANTS.viewportAmount }}
-            className="
-              hidden md:block
-              absolute left-1/2 -top-20
-              h-20
-              w-px
-              bg-cyan-400/30
-              origin-top
-              -translate-x-1/2
-            "
+            className="hidden md:block absolute left-1/2 -top-20 h-20 w-px bg-cyan-400/30 origin-top -translate-x-1/2"
             aria-hidden="true"
           />
           {skillGroups.map((group, groupIndex) => (
@@ -201,12 +183,7 @@ export default function SkillsTree() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: ANIMATION_CONSTANTS.viewportAmount }}
-                  className={`
-                    hidden md:block
-                    absolute -top-[1px] h-px w-1/2
-                    bg-cyan-400/40
-                    ${groupIndex === 0 ? "right-1/2 origin-left" : "left-1/2 origin-right"}
-                  `}
+                  className={`hidden md:block absolute -top-[1px] h-px w-1/2 bg-cyan-400/40 ${groupIndex === 0 ? "right-1/2 origin-left" : "left-1/2 origin-right"}`}
                   aria-hidden="true"
                 />
               )}
@@ -217,18 +194,12 @@ export default function SkillsTree() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true, amount: ANIMATION_CONSTANTS.viewportAmount }}
                 transition={{ delay: 0.5, duration: 0.3 }}
-                className="
-                  hidden md:block
-                  absolute -top-[3px] left-1/2 -translate-x-1/2
-                  w-1.5 h-1.5 rounded-full
-                  bg-cyan-400
-                  shadow-[0_0_8px_rgba(56,189,248,0.6)]
-                "
+                className="hidden md:block absolute -top-[3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(56,189,248,0.6)]"
                 aria-hidden="true"
               />
 
               <h3 
-                className="text-sm font-medium mb-6 text-gray-200 uppercase tracking-wider"
+                className="text-lg md:text-xl font-semibold mb-6 text-white"
                 id={`skills-${group.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {group.title}
@@ -245,20 +216,7 @@ export default function SkillsTree() {
                     key={skill}
                     variants={pill}
                     whileHover="hover"
-                    className="
-                      px-4 py-2
-                      text-sm
-                      rounded-lg
-                      border border-cyan-400/25
-                      bg-cyan-400/5
-                      text-cyan-200
-                      shadow-[0_0_16px_rgba(56,189,248,0.2)]
-                      hover:bg-cyan-400/10
-                      hover:shadow-[0_0_24px_rgba(56,189,248,0.3)]
-                      transition-colors
-                      cursor-default
-                      select-none
-                    "
+                    className="px-4 py-2 text-sm md:text-base rounded-lg border border-cyan-400/25 bg-cyan-400/5 text-cyan-200 shadow-[0_0_16px_rgba(56,189,248,0.15)] hover:bg-cyan-400/10 hover:shadow-[0_0_24px_rgba(56,189,248,0.25)] hover:border-cyan-400/40 transition-all duration-200 cursor-default select-none"
                   >
                     {skill}
                   </motion.li>

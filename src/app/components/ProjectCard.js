@@ -97,18 +97,7 @@ export default function ProjectCard({
                 href={links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  inline-flex items-center gap-2
-                  px-4 py-2
-                  text-sm font-medium
-                  text-cyan-300
-                  border border-cyan-400/30
-                  rounded-lg
-                  hover:bg-cyan-400/10
-                  hover:border-cyan-400/50
-                  transition-all duration-200
-                  group
-                "
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-cyan-300 border border-cyan-400/30 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 transition-all duration-200 group"
                 aria-label={`${LINK_LABELS.github} for ${title}`}
               >
                 <svg 
@@ -129,18 +118,7 @@ export default function ProjectCard({
                 href={links.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  inline-flex items-center gap-2
-                  px-4 py-2
-                  text-sm font-medium
-                  text-cyan-300
-                  border border-cyan-400/30
-                  rounded-lg
-                  hover:bg-cyan-400/10
-                  hover:border-cyan-400/50
-                  transition-all duration-200
-                  group
-                "
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-cyan-300 border border-cyan-400/30 rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400/50 transition-all duration-200 group"
                 aria-label={`${LINK_LABELS.demo} for ${title}`}
               >
                 <svg 
@@ -172,21 +150,10 @@ export default function ProjectCard({
           />
           
           {/* Overlay on hover */}
-          <div className="
-            absolute inset-0 
-            bg-gradient-to-t from-black/40 to-transparent 
-            opacity-0 group-hover:opacity-100 
-            transition-opacity duration-300
-          " />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           
           {/* Border glow effect */}
-          <div className="
-            absolute inset-0 
-            rounded-xl
-            border border-cyan-400/20
-            group-hover:border-cyan-400/40
-            transition-colors duration-300
-          " />
+          <div className="absolute inset-0 rounded-xl border border-cyan-400/20 group-hover:border-cyan-400/40 transition-colors duration-300" />
         </div>
       </div>
     </motion.article>
