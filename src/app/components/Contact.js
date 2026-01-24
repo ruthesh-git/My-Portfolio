@@ -153,7 +153,7 @@ export default function Contact() {
           <p className="text-gray-500 text-sm">
             Looking for my resume?{" "}
             <a
-              href="/ruthSDEResume.pdf"
+              href="/RuthSDEResume.pdf"
               download="Ruthesh_Medaboina_Resume.pdf"
               className="text-cyan-400 hover:text-cyan-300 underline"
             >
