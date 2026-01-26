@@ -93,16 +93,21 @@ export default function Navbar() {
   // Smooth scroll to section
   const handleNavClick = (e, href) => {
     e.preventDefault()
+    
+    // Close mobile menu first
     setMobileMenuOpen(false)
     
-    const element = document.querySelector(href)
-    if (element) {
-      const offsetTop = element.offsetTop - 80 // Account for fixed navbar
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      })
-    }
+    // Small delay to let menu close animation complete
+    setTimeout(() => {
+      const element = document.querySelector(href)
+      if (element) {
+        const offsetTop = element.offsetTop - 80 // Account for fixed navbar
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        })
+      }
+    }, 100)
   }
 
   return (
@@ -210,7 +215,7 @@ export default function Navbar() {
           height: mobileMenuOpen ? "auto" : 0,
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed top-[73px] left-0 z-40 w-full bg-black/95 backdrop-blur-md border-b border-white/5 overflow-hidden md:hidden"
+        className=" fixed top-[73px] left-0 z-40 w-full bg-black/95 backdrop-blur-md border-b border-white/5 overflow-hidden md:hidden"
       >
         <ul className="flex flex-col py-4 px-6 space-y-1">
           {NAV_ITEMS.map((item) => {
@@ -247,6 +252,7 @@ export default function Navbar() {
           exit={{ opacity: 0 }}
           onClick={() => setMobileMenuOpen(false)}
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 md:hidden"
+          style={{ top: '73px' }}
           aria-hidden="true"
         />
       )}
